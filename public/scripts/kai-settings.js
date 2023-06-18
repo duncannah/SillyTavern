@@ -213,6 +213,7 @@ function canUseKoboldStopSequence(version) {
 }
 
 function canUseKoboldStreaming(koboldVersion) {
+    return true;
     if (koboldVersion && koboldVersion.result == 'KoboldCpp') {
         return (koboldVersion.version || '0.0').localeCompare(MIN_STREAMING_KCPPVERSION, undefined, { numeric: true, sensitivity: 'base' }) > -1;
     } else return false;
